@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #292929;
+    color: #f0f0f0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 100px;
+}
+
+.search-container {
+    position: relative;
+    width: 500px;
+}
+
+.search-container .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none; 
+    filter: invert(1);
+    background-color: #D6D6D6;
+}
+
+.search-container input {
+    width: 100%;
+    height: 40px;
+    padding-left: 40px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input:focus {
+    border-color: rgba(0, 0, 255, 0.508);
+}
+
+.header .menu-icons img {
+    width: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    padding-top: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+/* Main Content */
+.main {
+    margin-left: 200px;
+    padding: 15px;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.video-card {
+    height: 40vh;
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}       
+
+.video-card img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
+
+.video-card .content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.video-card .content h4 {
+    font-size: 16px;
+}
+
+.video-card .content p {
+    font-size: 14px;
+}
+
+.sidebar-elements {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+}
